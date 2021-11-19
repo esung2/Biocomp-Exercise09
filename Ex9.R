@@ -1,5 +1,3 @@
-setwd("~/Desktop/r-novice-inflammation/")
-
 ##Custom function
 
 #dir should be written as a path
@@ -7,7 +5,7 @@ setwd("~/Desktop/r-novice-inflammation/")
 function <- function(dir, col){   #dir = specified directory, col = specified column
   results <- 0
   for (i in list.files(dir)){
-   table <- read.table(file=paste(dir,i,sep=""), sep=",", header = TRUE, stringsAsFactors=FALSE)  #assuming files are all csv files
+    table <- read.table(file=paste(dir,i,sep=""), sep=",", header = TRUE, stringsAsFactors=FALSE)  #assuming files are all csv files
     if (nrow(table)<50){
       print("Warning: There are less than 50 observations.")
       override <- readline("If you would still like to continue, press Y. To exit, press any other key. ")
