@@ -2,6 +2,8 @@ setwd("~/Desktop/r-novice-inflammation/")
 
 ##Custom function
 
+#dir should be written as a path
+
 function <- function(dir, col){   #dir = specified directory, col = specified column
   results <- 0
   for (i in list.files(dir)){
